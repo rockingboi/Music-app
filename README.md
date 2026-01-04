@@ -466,7 +466,7 @@ Each song has a three-dot menu with options:
 - Image URL optimization
 - Memoization of expensive operations
 
-## 🏗️ Architecture
+##  Architecture
 
 ### State Management
 
@@ -679,24 +679,24 @@ Manages song downloads using expo-file-system and AsyncStorage.
 - Metadata: AsyncStorage with download information
 - Key: `@music_player_downloads`
 
-## 🎨 UI/UX Features
+## UI/UX Features
 
 ### Design Elements
-- ✅ **Responsive Design**: Layouts adapt to different screen sizes
-- ✅ **Safe Area Handling**: Proper handling for notches and status bars (fixed padding for APK compatibility)
-- ✅ **Professional Icons**: Feather icons throughout the app
-- ✅ **Smooth Animations**: Transitions and state changes
-- ✅ **Loading States**: Activity indicators during data loading
-- ✅ **Empty States**: Visual feedback when lists are empty
-- ✅ **Error Handling**: User-friendly error messages
-- ✅ **Image Fallbacks**: Placeholder images when images fail to load
-- ✅ **Clean Song Names**: Removes parentheses and brackets from song titles
-- ✅ **Duration Formatting**: Formats duration as MM:SS
-- ✅ **Image URL Optimization**: Prioritizes high-quality images (500x500, 150x150)
-- ✅ **Professional Typography**: Consistent font sizes and weights
-- ✅ **Color Consistency**: Theme-aware colors throughout
-- ✅ **Touch Feedback**: Active opacity for buttons
-- ✅ **Scroll Optimization**: Optimized scrolling performance
+-  **Responsive Design**: Layouts adapt to different screen sizes
+-  **Safe Area Handling**: Proper handling for notches and status bars (fixed padding for APK compatibility)
+-  **Professional Icons**: Feather icons throughout the app
+-  **Smooth Animations**: Transitions and state changes
+-  **Loading States**: Activity indicators during data loading
+-  **Empty States**: Visual feedback when lists are empty
+-  **Error Handling**: User-friendly error messages
+-  **Image Fallbacks**: Placeholder images when images fail to load
+-  **Clean Song Names**: Removes parentheses and brackets from song titles
+-  **Duration Formatting**: Formats duration as MM:SS
+-  **Image URL Optimization**: Prioritizes high-quality images (500x500, 150x150)
+-  **Professional Typography**: Consistent font sizes and weights
+-  **Color Consistency**: Theme-aware colors throughout
+-  **Touch Feedback**: Active opacity for buttons
+-  **Scroll Optimization**: Optimized scrolling performance
 
 ### Layout Optimizations
 - Fixed padding for APK compatibility (instead of SafeAreaView in some screens)
@@ -777,7 +777,7 @@ All data is stored locally using AsyncStorage and File System:
 - Error handling for corrupted data
 - Default values for missing data
 
-## 🐛 Known Issues / Limitations
+##  Known Issues / Limitations
 
 1. **Album Songs API Endpoint**: The `/api/albums/${id}/songs` endpoint returns "route not found" error. Workaround implemented: Filter artist songs by album ID/name.
 
