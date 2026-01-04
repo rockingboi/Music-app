@@ -8,7 +8,6 @@ import {
   StyleSheet,
   ActivityIndicator,
 } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
 import { useFocusEffect } from '@react-navigation/native';
 import { usePlayerStore, Song } from '../store/playerStore';
 import { colors } from '../theme/colors';
@@ -183,11 +182,6 @@ export default function FavoritesScreen() {
 
   return (
     <View style={styles.container}>
-      <View style={styles.header}>
-        <Text style={styles.headerTitle}>Favorites</Text>
-        <Text style={styles.headerSubtitle}>{favorites.length} songs</Text>
-      </View>
-
       <FlatList
         data={favorites}
         keyExtractor={(item) => item.id}
@@ -212,20 +206,15 @@ const styles = StyleSheet.create({
   },
   header: {
     padding: 16,
-    paddingTop: 8,
+    paddingTop: 36,
     paddingBottom: 12,
     borderBottomWidth: 1,
     borderBottomColor: colors.divider,
   },
   headerTitle: {
-    fontSize: 22,
+    fontSize: 20,
     fontWeight: 'bold',
     color: colors.textPrimary,
-    marginBottom: 4,
-  },
-  headerSubtitle: {
-    fontSize: 14,
-    color: colors.textSecondary,
   },
   list: {
     paddingBottom: 120,

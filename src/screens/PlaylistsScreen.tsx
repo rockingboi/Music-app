@@ -22,9 +22,8 @@ import { loadPlaylists, createPlaylist, deletePlaylist, Playlist } from '../util
 const getImageUrl = (song: Song) => {
   if (song.image && Array.isArray(song.image) && song.image.length > 0) {
     const img = song.image[song.image.length - 1];
-    return img.link || img.url;
+    return img.link;
   }
-  if (typeof song.image === 'string') return song.image;
   return undefined;
 };
 
@@ -236,13 +235,13 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     padding: 16,
-    paddingTop: 8,
+    paddingTop: 12,
     paddingBottom: 12,
     borderBottomWidth: 1,
     borderBottomColor: colors.divider,
   },
   headerTitle: {
-    fontSize: 22,
+    fontSize: 20,
     fontWeight: 'bold',
     color: colors.textPrimary,
   },

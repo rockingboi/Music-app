@@ -1,4 +1,5 @@
 import { View, Text, FlatList, TouchableOpacity, Image, StyleSheet } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { usePlayerStore, Song } from '../store/playerStore';
 import { colors } from '../theme/colors';
 
@@ -85,14 +86,14 @@ export default function QueueScreen() {
 
   if (queue.length === 0) {
     return (
-      <View style={styles.emptyContainer}>
+      <SafeAreaView style={styles.emptyContainer} edges={['top']}>
         <Text style={styles.emptyText}>Queue is empty</Text>
-      </View>
+      </SafeAreaView>
     );
   }
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container} edges={['top']}>
       <Text style={styles.title}>Queue ({queue.length})</Text>
       <FlatList
         data={queue}
@@ -100,7 +101,7 @@ export default function QueueScreen() {
         renderItem={renderItem}
         contentContainerStyle={styles.list}
       />
-    </View>
+    </SafeAreaView>
   );
 }
 

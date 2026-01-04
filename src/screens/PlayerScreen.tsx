@@ -115,34 +115,28 @@ export default function PlayerScreen() {
   const rewind10Seconds = useCallback(async () => {
     if (!sound || duration === 0) return;
     try {
-      // Get current position from sound
-      const status = await sound.getStatusAsync();
-      if (status.isLoaded && status.positionMillis !== null) {
-        const currentPos = status.positionMillis;
-        const newPosition = Math.max(0, currentPos - 10000);
-        await sound.setPositionAsync(newPosition);
-        setPosition(newPosition);
-      }
+      // Use current position directly from state for faster response
+      const currentPos = position;
+      const newPosition = Math.max(0, currentPos - 10000);
+      await sound.setPositionAsync(newPosition);
+      setPosition(newPosition);
     } catch (error) {
       // Silently handle errors
     }
-  }, [sound, duration]);
+  }, [sound, duration, position, setPosition]);
 
   const forward10Seconds = useCallback(async () => {
     if (!sound || duration === 0) return;
     try {
-      // Get current position from sound
-      const status = await sound.getStatusAsync();
-      if (status.isLoaded && status.positionMillis !== null) {
-        const currentPos = status.positionMillis;
-        const newPosition = Math.min(duration, currentPos + 10000);
-        await sound.setPositionAsync(newPosition);
-        setPosition(newPosition);
-      }
+      // Use current position directly from state for faster response
+      const currentPos = position;
+      const newPosition = Math.min(duration, currentPos + 10000);
+      await sound.setPositionAsync(newPosition);
+      setPosition(newPosition);
     } catch (error) {
       // Silently handle errors
     }
-  }, [sound, duration]);
+  }, [sound, duration, position, setPosition]);
 
   const panResponder = useMemo(() => PanResponder.create({
     onStartShouldSetPanResponder: () => true,

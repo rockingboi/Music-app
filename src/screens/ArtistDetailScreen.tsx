@@ -298,7 +298,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     paddingHorizontal: 16,
-    paddingTop: 12,
+    paddingTop: 36,
     paddingBottom: 12,
   },
   headerButton: {

@@ -29,13 +29,13 @@ export default function SettingsScreen() {
     },
     header: {
       padding: 16,
-      paddingTop: 8,
+      paddingTop: 12,
       paddingBottom: 12,
       borderBottomWidth: 1,
       borderBottomColor: colors.divider,
     },
     headerTitle: {
-      fontSize: 24,
+      fontSize: 20,
       fontWeight: 'bold',
       color: colors.textPrimary,
     },
