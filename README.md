@@ -153,4 +153,13 @@ src/
 ## License
 
 MIT
+## 📱 Android App APK Download
+
+👉 Click below to download the Android APK:
+
+🔗 [Download APK](https://expo.dev/artifacts/eas/427xYqECGUJgpwXLK5dzZA.apk)
+
+⚠️ Note:
+- This is a release APK
+- Allow "Install from unknown sources" on your Android device
 
