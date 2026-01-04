@@ -886,11 +886,15 @@ This project is private.
 - React Navigation for navigation solution
 - Zustand for state management
 - All open-source contributors
+## 📱 Android App APK Download
 
-## 📞 Support
+👉 Click below to download the Android APK:
 
-For support, email support@example.com or create an issue in the repository.
+🔗 [Download APK](https://expo.dev/artifacts/eas/427xYqECGUJgpwXLK5dzZA.apk)
 
----
+⚠️ Note:
+- This is a release APK
+- Allow "Install from unknown sources" on your Android device
+
 
 **Built with ❤️ using React Native and Expo**
