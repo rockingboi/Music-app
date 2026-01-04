@@ -125,10 +125,6 @@ All API calls are centralized in `src/api/saavn.ts`:
 ## Future Improvements
 
 - [ ] Drag-and-drop queue reordering
-- [ ] Offline song downloads
-- [ ] Album detail screen
-- [ ] Artist detail screen with all songs/albums
-- [ ] Playlist support
 - [ ] Better error handling and retry logic
 - [ ] Loading skeletons for better UX
 
